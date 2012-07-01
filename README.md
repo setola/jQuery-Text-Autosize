@@ -7,30 +7,38 @@ a jQuery plugin to size a text to fit its container
 Examples
 ========
 
+Include in your page
+--------------------
+
+First of all include jQuery and then Text Autosize
+
+		<script src="jquery.min.js"></script>
+		<script src="jquery.text-autosize.js"></script>
+
 
 Simplest
 --------
 
-<script type="text/javascript">
-	jQuery(document).ready(function(){
-			jQuery('#container .auto-size').textAutoSize();
-		});
-</script>
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+				jQuery('#container .auto-size').textAutoSize();
+			});
+	</script>
 
 
 More options
 ------------
 
-<script type="text/javascript">
-	jQuery(document).ready(function(){
-		jQuery('#container .auto-size').textAutoSize({
-			maxSize: 		100, //maximum font-size
-			minSize: 		10, //minimum font-size
-			grain:			0.5, //font-size grain 
-			mode:				"rec-binary" //search algorithm to be used
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+			jQuery('#container .auto-size').textAutoSize({
+				maxSize: 		100, //maximum font-size
+				minSize: 		10, //minimum font-size
+				grain:			0.5, //font-size grain 
+				mode:				"rec-binary" //search algorithm to be used
+			});
 		});
-	});
-</script>
+	</script>
 	
 	
 	
