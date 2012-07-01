@@ -1,0 +1,53 @@
+<html>
+	<body>
+		<style>
+			.text-container {
+				margin: 10px;
+				width: 250px; 
+				border: 1px solid #c00;
+				line-height: 1;
+				font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+				text-align: center;
+				/*white-space: nowrap;*/
+			}
+			
+			.auto-size {
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+		<div id="container1" class="text-container">
+			<p class="auto-size">This Text is</p>
+			<p class="auto-size"> </p>
+			<p class="auto-size">sized to fit</p>
+			<p class="auto-size" style="text-transform: uppercase;">its own beautiful fixed width</p>
+			<p class="auto-size">container</p>
+		</div>
+		<div id="container2" class="text-container">
+			<p class="auto-size">This Text is</p>
+			<p class="auto-size"> </p>
+			<p class="auto-size">sized to fit</p>
+			<p class="auto-size" style="text-transform: uppercase;">its own beautiful fixed width</p>
+			<p class="auto-size">container</p>
+		</div>
+		<script src="jquery.min.js"></script>
+		<script src="jquery.autosize.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function(){
+				jQuery('#container1 .auto-size').textAutoSize({
+					width: 			249,
+					maxSize: 		200,
+					minSize: 		5,
+					//testEl:			jQuery('#auto-size-test'),
+					mode:				"ite-binary"
+				});
+				jQuery('#container2 .auto-size').textAutoSize({
+					maxSize: 		100,
+					minSize: 		10,
+					//testEl:			jQuery('#auto-size-test2'),
+					mode:				"rec-binary"
+				});
+			});
+		</script>
+	</body>
+</html>
